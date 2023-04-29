@@ -4,12 +4,14 @@ import Link from 'next/link'
 
 const Layout = ({ title ,children}) => {
   return (
-    <div className='flex min-h-screen flex-col justify-between'>
+    <>
      <Head>
           <title> {title ? title + " - Amazonas":"Amazona" } </title>
           <meta name="description" content="Ecommerce Website" />
           <link rel="icon" href="/favicon.ico" />
-        </Head>
+        </Head>    
+    <div className='flex min-h-screen flex-col justify-between'>
+
       <header>
              <nav className='flex h-12 items-center justify-between p-4 shadow-md'>
                    <Link href="/" className='text-lg font-bold'>Amazonas </Link>
@@ -26,6 +28,7 @@ const Layout = ({ title ,children}) => {
             <p> 2023 &copy; Tutorial </p>
       </footer>
     </div>
+    </>
   )
 }
 
